@@ -1,0 +1,77 @@
+:root{
+    --done-icon-size: 1.7rem;
+    --trash-icon-size: 1rem;
+}
+.todo{
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+    background-color: #fff;
+    min-height: 3rem;
+}
+.todo-part{
+    width: 0;
+    display: flex;
+    align-items: center;
+    flex: 1;
+    cursor: pointer;
+}
+.todo-content{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.done-icon{
+    display: none;
+    width: var(--done-icon-size);
+    height: var(--done-icon-size);
+    user-select: none;
+}
+.done-icon.show{
+    display: inline;
+}
+.todo-text{
+    display: flex;
+    align-items: center;
+    flex: 1;
+    height: 100%;
+    overflow-x: auto;
+    user-select: none;
+    margin-left: 10px;
+    font-family: 'Oleo Script Swash Caps', cursive;
+    font-size: 2em;
+    padding-right: 5px;
+}
+.todo-text.done{
+    color: #AAA;
+    margin-left: 5px;
+}
+.dlt-part{
+    display: flex;
+    align-items: center;
+    width: 5rem;
+}
+.dlt-button{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: center;
+    height: 100%;
+    background-color: #fc5e5b;
+    border: none;
+    cursor: pointer;
+    user-select: none;
+    color: #fff;
+    font-weight: 600;
+}
+.dlt-button:active{
+    transform: scale(.9);
+}
+.trash-icon{
+    width: var(--trash-icon-size);
+    height: var(--trash-icon-size);
+    font-weight: 600;
+    pointer-events: none;
+}
